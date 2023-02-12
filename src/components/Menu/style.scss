@@ -1,0 +1,27 @@
+@import "../../variables/variables";
+.menu_wrapper {
+  background-color: $bg;
+  height: 55px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  .menu_container {
+    width: calc(100% - 80px);
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo_container{
+        color: #fff;
+        font-family: 'Lalezar';
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    .user_menu_container{
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.sugestion_wrapper {
+  .sugestion_container {
+    justify-content: space-between;
+    .sugestion_name {
+      font-weight: 600;
+    }
+    .sugestion_vote {
+      &::before {
+        text-transform: uppercase;
+        content: "rate: ";
+        font-size: 10px;
+        opacity: 0.6;
+      }
+    }
+    .last_data{
+        font-size: 10px;
+    }
+  }
+}

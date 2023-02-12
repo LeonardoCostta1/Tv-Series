@@ -1,0 +1,53 @@
+.description_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.description_wrapper .description_inforamtion_container {
+  width: calc(100% - 400px);
+}
+.description_wrapper .description_inforamtion_container .genres_container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.description_wrapper .description_inforamtion_container .genres_container .backdrop {
+  height: 37px;
+  width: 37px;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+.description_wrapper .description_inforamtion_container .genres_container .backdrop img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.description_wrapper .description_inforamtion_container .genres_container .genre {
+  margin-right: 10px;
+  font-size: 12px;
+}
+.description_wrapper .description_inforamtion_container .genres_container .genre:last-child {
+  margin-right: 0;
+}
+.description_wrapper .description_inforamtion_container .title {
+  font-family: "Bevan", cursive;
+  font-style: normal;
+  font-size: 70px;
+  line-height: 112px;
+  text-transform: uppercase;
+}
+.description_wrapper .description_inforamtion_container .overview {
+  font-style: normal;
+  line-height: 22px;
+  text-align: justify;
+  opacity: 0.5;
+  width: 70%;
+}
+.description_wrapper .description_inforamtion_container .author_and_release_date {
+  font-style: normal;
+  line-height: 12px;
+  margin: 20px 0;
+}/*# sourceMappingURL=style.css.map */

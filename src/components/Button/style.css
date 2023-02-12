@@ -1,0 +1,13 @@
+.button_wrapper {
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  width: 199px;
+  height: 49px;
+  border-radius: 40px;
+}
+.button_wrapper .title_button {
+  text-transform: capitalize;
+}/*# sourceMappingURL=style.css.map */
