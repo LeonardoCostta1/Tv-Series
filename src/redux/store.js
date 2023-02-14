@@ -1,12 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
+import codeReducer from "../services/id";
+import modalReducer from "../services/modalSlice";
 import { moviesApi } from "../services/movies";
 
 export const store = configureStore({
   reducer: {
-    [moviesApi.reducerPath]: moviesApi.reducer
+    [moviesApi.reducerPath]: moviesApi.reducer,
+    code: codeReducer,
+    modalSlice:modalReducer
   },
-  // Adding the api middleware enables caching, invalidation, polling,
-  // and other useful features of `rtk-query`.
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(moviesApi.middleware)
 });

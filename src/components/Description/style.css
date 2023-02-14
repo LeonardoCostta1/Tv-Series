@@ -3,9 +3,31 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  position: relative;
+  height: 100%;
+}
+.description_wrapper .overlay {
+  background: url(../../assets/img/overlay.png), linear-gradient(#000000 5%, rgba(0, 0, 0, 0.3568627451), #000000 80%);
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  width: calc(100% + 240px);
+  left: -120px;
+}
+.description_wrapper .backPoster {
+  width: calc(100% + 240px);
+  left: -120px;
+  height: 100%;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 30%;
+     object-position: 50% 30%;
+  z-index: 1;
 }
 .description_wrapper .description_inforamtion_container {
   width: calc(100% - 400px);
+  z-index: 3;
 }
 .description_wrapper .description_inforamtion_container .genres_container {
   display: flex;

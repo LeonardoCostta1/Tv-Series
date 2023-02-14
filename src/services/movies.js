@@ -12,9 +12,12 @@ export const moviesApi = createApi({
     getPopularSeries: builder.query({
       query: () => `popular?api_key=87f2c7d93db7f6b90c6388e00108e35e`
     }),
+    getOnlyMovieByCode: builder.query({
+      query: (code) => `${code}?api_key=87f2c7d93db7f6b90c6388e00108e35e`
+    }),
   })
 });
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { useGetMovieByCodeQuery, useGetPopularSeriesQuery } = moviesApi;
+export const { useGetMovieByCodeQuery, useGetPopularSeriesQuery,useGetOnlyMovieByCodeQuery } = moviesApi;

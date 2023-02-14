@@ -7,8 +7,9 @@
   justify-content: center;
   align-items: center;
   position: fixed;
+  z-index: 20;
   .menu_container {
-    width: calc(100% - 80px);
+    width: calc(100% - 240px);
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -18,8 +19,26 @@
         font-family: 'Lalezar';
         font-weight: 400;
         text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .brand{
+          height: 25px;
+          width: 25px;
+          background: #fff;
+          border-radius: 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 45px;
+          margin-right: 8px;
+          span{
+            color: #000;
+            position: relative;
+            top: 4px;
+          }
+        }
     }
-
     .user_menu_container{
       font-size: 12px;
     }

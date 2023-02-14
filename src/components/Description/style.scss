@@ -1,10 +1,35 @@
+@import "../../variables/variables";
 .description_wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  position: relative;
+  height: 100%;
+
+  .overlay {
+    background: url(../../assets/img/overlay.png),
+      linear-gradient($bg 5%, #0000005b, $bg 80%);
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: calc(100% + 240px);
+    left: -120px;
+  }
+
+  .backPoster {
+    width: calc(100% + 240px);
+    left: -120px;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    object-position: 50% 30%;
+    z-index: 1;
+  }
   .description_inforamtion_container {
     width: calc(100% - 400px);
+    z-index: 3;
+
     .genres_container {
       display: flex;
       align-items: center;

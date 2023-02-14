@@ -3,6 +3,7 @@
 }
 .sugestion_wrapper .sugestion_container .sugestion_name {
   font-weight: 600;
+  margin-top: 10px;
 }
 .sugestion_wrapper .sugestion_container .sugestion_vote::before {
   text-transform: uppercase;

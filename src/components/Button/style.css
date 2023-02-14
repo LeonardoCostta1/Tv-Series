@@ -7,6 +7,9 @@
   width: 199px;
   height: 49px;
   border-radius: 40px;
+  position: relative;
+  z-index: 5;
+  cursor: pointer;
 }
 .button_wrapper .title_button {
   text-transform: capitalize;

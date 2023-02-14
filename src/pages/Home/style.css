@@ -2,7 +2,7 @@
 .home_wrapper {
   height: 100vh;
   width: 100%;
-  background-color: #000;
+  background-color: #000000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,7 +12,7 @@
   height: 100vh;
 }
 .home_wrapper .home_container .description_movie_container {
-  height: 512px;
+  height: calc(100vh - 380px);
   width: 100%;
   display: flex;
   align-items: center;

@@ -1,11 +1,11 @@
 import React from "react";
 import "./style.css";
 
-function Button({title }) {
+function Button({onClick, title}) {
   return (
-    <div className="button_wrapper">
+    <button className="button_wrapper" onClick={onClick}>
       <div className="title_button">{title}</div>
-    </div>
+    </button>
   );
 }
 

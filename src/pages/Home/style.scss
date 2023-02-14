@@ -11,10 +11,11 @@
     width: calc(100% - 240px);
     height: 100vh;
     .description_movie_container {
-      height: 512px;
+      height: calc(100vh - 380px);
       width: 100%;
       display: flex;
       align-items: center;
+
     }
   }
 }

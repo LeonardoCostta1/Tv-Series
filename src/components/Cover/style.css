@@ -3,6 +3,7 @@
   height: 275px;
   border-radius: 20px;
   background: rgba(0, 0, 0, 0.1215686275);
+  cursor: pointer;
 }
 .cover_container img {
   width: 100%;
