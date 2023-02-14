@@ -2,6 +2,7 @@ import React from "react";
 import { useGetOnlyMovieByCodeQuery } from "../../services/movies";
 import { useSelector } from "react-redux";
 import "./style.css";
+import TitleCategory from "../../components/TitleCategory";
 
 function Info() {
   const code = useSelector((state) => state.code);
@@ -17,13 +18,16 @@ function Info() {
           <>Loading...</>
         ) : data ? (
           <>
-            <div className="top_image_container">
+              
+            <div className="info_container">
+         
+              <div className="image_container">
               <div className="overlay"></div>
-              <img
-                src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${data?.backdrop_path}`}
-                alt="cover film"
-              />
-
+                <img
+                  src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${data?.backdrop_path}`}
+                  alt="cover film"
+                />
+              </div>
               <div className="content_info_container">
                 <div className="genres_container">
                   {data?.genres.map((genres) => {
@@ -47,6 +51,18 @@ function Info() {
                   {data?.original_language}
                   <span>lançamento: </span>
                   {data?.first_air_date}
+                </div>
+
+                <TitleCategory title="ultimo episódio"></TitleCategory>
+                <div className="last_episode_container">
+                  <div className="last_ep_title">
+                    <span>ultimo episódio :</span>
+                    {data?.last_episode_to_air.name}
+                  </div>
+                  <div className="last_ep_title">
+                    <span>lançamento :</span>
+                    {data?.last_episode_to_air.air_date}
+                  </div>
                 </div>
               </div>
             </div>

@@ -4,19 +4,19 @@
   justify-content: space-between;
   width: 100%;
   position: relative;
-  height: 100%;
+  height: 85vh;
 }
 .description_wrapper .overlay {
-  background: url(../../assets/img/overlay.png), linear-gradient(#000000 5%, rgba(0, 0, 0, 0.3568627451), #000000 80%);
+  background: url(../../assets/img/overlay.png), linear-gradient(#000000, rgba(0, 0, 0, 0.2470588235) 30%, #000000);
   position: absolute;
   z-index: 2;
   height: 100%;
-  width: calc(100% + 240px);
-  left: -120px;
+  width: calc(100% + 200px);
+  left: -100px;
 }
 .description_wrapper .backPoster {
-  width: calc(100% + 240px);
-  left: -120px;
+  width: calc(100% + 200px);
+  left: -100px;
   height: 100%;
   position: absolute;
   -o-object-fit: cover;
@@ -28,6 +28,8 @@
 .description_wrapper .description_inforamtion_container {
   width: calc(100% - 400px);
   z-index: 3;
+  position: absolute;
+  bottom: 50px;
 }
 .description_wrapper .description_inforamtion_container .genres_container {
   display: flex;
@@ -56,6 +58,7 @@
 }
 .description_wrapper .description_inforamtion_container .title {
   font-family: "Bevan", cursive;
+  font-weight: 600;
   font-style: normal;
   font-size: 70px;
   line-height: 112px;
@@ -65,11 +68,28 @@
   font-style: normal;
   line-height: 22px;
   text-align: justify;
-  opacity: 0.5;
   width: 70%;
 }
 .description_wrapper .description_inforamtion_container .author_and_release_date {
   font-style: normal;
   line-height: 12px;
-  margin: 20px 0;
+  margin: 20px 0 40px 0;
+  display: flex;
+}
+.description_wrapper .description_inforamtion_container .created_text {
+  text-transform: uppercase;
+  font-size: 10px;
+  opacity: 0.7;
+}
+.description_wrapper .description_inforamtion_container .created_text::after {
+  content: "";
+}
+.description_wrapper .description_inforamtion_container .first_date_on_air {
+  margin-left: 10px;
+}
+.description_wrapper .description_inforamtion_container .author_name {
+  margin-left: 5px;
+}
+.description_wrapper .description_inforamtion_container .author_name::after {
+  content: ",";
 }/*# sourceMappingURL=style.css.map */

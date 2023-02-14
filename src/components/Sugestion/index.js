@@ -5,8 +5,9 @@ import "./style.css";
 import { useGetPopularSeriesQuery } from "../../services/movies";
 import { useDispatch } from "react-redux";
 import { setModalTrue } from "../../services/modalSlice";
-function Sugestion() {
-  const { data, error, isLoading } = useGetPopularSeriesQuery();
+import TitleCategory from "../TitleCategory";
+function Sugestion({category,title}) {
+  const { data, error, isLoading } = useGetPopularSeriesQuery(category);
   const dispatch = useDispatch();
 
   const sendToInfoPage = async (code) => {
@@ -17,19 +18,21 @@ function Sugestion() {
   var settings = {
     dots: false,
     infinite: true,
-    arrows: false,
+    arrows: true,
+    centerMode: true,
+    draggable:false,
+    swipeToSlide:true,
+    centerPadding:'50px',
     speed: 500,
     slidesToShow: 7,
-    slidesToScroll: 7,
+    slidesToScroll: 1,
     initialSlide: 0,
-    slickNext: "FRENTE",
-    slickPrev: "<SamplePrevArrow />",
     responsive: [
       {
         breakpoint: 1658,
         settings: {
           slidesToShow: 6,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           infinite: true,
           dots: true
         }
@@ -38,27 +41,25 @@ function Sugestion() {
         breakpoint: 1367,
         settings: {
           slidesToShow: 5,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           infinite: true,
           dots: true
         }
       },
-
       {
         breakpoint: 1263,
         settings: {
           slidesToShow: 4,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           infinite: true,
           dots: true
         }
       },
-
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           infinite: true,
           dots: true
         }
@@ -67,7 +68,7 @@ function Sugestion() {
         breakpoint: 874,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           infinite: true,
           dots: true
         }
@@ -90,6 +91,7 @@ function Sugestion() {
       }
     ]
   };
+
   return (
     <>
       {error ? (
@@ -99,23 +101,28 @@ function Sugestion() {
       ) : data ? (
         <>
           <div className="sugestion_wrapper">
+          <TitleCategory title={title}/>
             <div className="sugestion_container">
               <Slider {...settings}>
                 {data?.results.map((serie) => {
                   return (
-                    <div
-                      key={serie.id}
-                      onClick={() => sendToInfoPage(serie.id)}
-                    >
-                      <Cover
-                        backdrop={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${serie.backdrop_path}`}
-                      />
-                      <div className="sugestion_name">
-                        {serie.original_name}
+                    serie.backdrop_path && (
+                      <div
+                        key={serie.id}
+                        onClick={() => sendToInfoPage(serie.id)}
+                      >
+                        <Cover
+                          backdrop={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${serie.backdrop_path}`}
+                        />
+                        <div className="sugestion_name">
+                          {serie.original_name}
+                        </div>
+                        <div className="sugestion_vote">
+                          {serie.vote_average}
+                        </div>
+                        <div className="last_data">{serie.first_air_date}</div>
                       </div>
-                      <div className="sugestion_vote">{serie.vote_average}</div>
-                      <div className="last_data">{serie.first_air_date}</div>
-                    </div>
+                    )
                   );
                 })}
               </Slider>

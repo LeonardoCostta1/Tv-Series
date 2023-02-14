@@ -1,6 +1,25 @@
 .sugestion_wrapper {
+  margin-bottom: 50px;
   .sugestion_container {
     justify-content: space-between;
+   .slick-next{
+      &::before{
+        font-family: "Font Awesome 5 Free";
+        font-weight: 600;
+        content: '\f054'!important;
+        color: #ddd!important;
+        font-size: 40px;
+      }
+    }
+    .slick-prev{
+      &::before{
+        font-family: "Font Awesome 5 Free";
+        font-weight: 600;
+        content: '\f053'!important;
+        color: #ddd!important;
+        font-size: 40px;
+      }
+    }
     .sugestion_name {
       font-weight: 600;
       margin-top: 10px;
@@ -17,4 +36,6 @@
         font-size: 10px;
     }
   }
+
+
 }

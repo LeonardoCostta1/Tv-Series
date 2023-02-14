@@ -25,7 +25,9 @@ function Popup() {
       paddingLeft: "0",
       paddingRight: "0",
       paddingTop: "0",
-      // paddingBottom: "0"
+      // height:'auto',
+      // paddingBottom: "100px",
+
     }
   };
 
@@ -40,6 +42,7 @@ function Popup() {
       contentLabel="Example Modal"
       ariaHideApp={false}
     >
+      <div className="closeModal" onClick={closeModal}><i className="fa-solid fa-xmark"></i></div>
       <Info />
     </Modal>
   );

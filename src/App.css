@@ -1,5 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Bevan&family=Lalezar&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bevan&family=Lalezar&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 .App {
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
 }
+
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+*::-webkit-scrollbar {
+  width: 5px;
+}
+*::-webkit-scrollbar-track {
+  background: #090909;
+}
+*::-webkit-scrollbar-thumb {
+  background: #535353;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}/*# sourceMappingURL=App.css.map */

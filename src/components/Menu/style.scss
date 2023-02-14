@@ -1,15 +1,15 @@
 @import "../../variables/variables";
 .menu_wrapper {
-  background-color: $bg;
-  height: 55px;
+  height: 100px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
   z-index: 20;
+  transition: all ease .2s;
   .menu_container {
-    width: calc(100% - 240px);
+    width: calc(100% - $lateralDistance);
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -43,4 +43,9 @@
       font-size: 12px;
     }
   }
+}
+
+.active{
+  background-color: $bg;
+  height: 60px;
 }

@@ -1,21 +1,17 @@
 @import "../../variables/variables";
 @import url("https://fonts.googleapis.com/css2?family=Lalezar&display=swap");
 .home_wrapper {
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
+  padding-bottom: 100px;
   width: 100%;
   background-color: $bg;
   display: flex;
   align-items: center;
   justify-content: center;
   .home_container {
-    width: calc(100% - 240px);
-    height: 100vh;
-    .description_movie_container {
-      height: calc(100vh - 380px);
-      width: 100%;
-      display: flex;
-      align-items: center;
-
-    }
+    width: calc(100% - $lateralDistance);
+    min-height: 100vh;
+    height: auto;
   }
 }

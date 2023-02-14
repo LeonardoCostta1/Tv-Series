@@ -10,7 +10,7 @@ export const moviesApi = createApi({
       query: (id) => `${id}?api_key=87f2c7d93db7f6b90c6388e00108e35e`
     }),
     getPopularSeries: builder.query({
-      query: () => `popular?api_key=87f2c7d93db7f6b90c6388e00108e35e`
+      query: (category) => `${category}?api_key=87f2c7d93db7f6b90c6388e00108e35e`
     }),
     getOnlyMovieByCode: builder.query({
       query: (code) => `${code}?api_key=87f2c7d93db7f6b90c6388e00108e35e`
