@@ -1,12 +1,12 @@
 import React from "react";
-import { useGetOnlyMovieByCodeQuery } from "../../services/movies";
+import { useGetOnlyMovieByCodeQuery } from "../../redux/reducers/movies";
 import { useSelector } from "react-redux";
 import "./style.css";
 import TitleCategory from "../../components/TitleCategory";
+import Loading from "../../components/Loading";
 
 function Info() {
   const code = useSelector((state) => state.code);
-
   const { data, error, isLoading } = useGetOnlyMovieByCodeQuery(code);
 
   return (
@@ -15,7 +15,7 @@ function Info() {
         {error ? (
           <>Oh no, there was an error</>
         ) : isLoading ? (
-          <>Loading...</>
+          <Loading/>
         ) : data ? (
           <>
               

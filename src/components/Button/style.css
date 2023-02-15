@@ -14,7 +14,11 @@
   border: none;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
+  transition: all ease 0.3s;
 }
 .button_wrapper .title_button {
   text-transform: capitalize;
+}
+.button_wrapper:hover {
+  opacity: 0.7;
 }/*# sourceMappingURL=style.css.map */

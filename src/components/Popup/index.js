@@ -3,7 +3,7 @@ import "./style.css";
 import { useDispatch, useSelector } from "react-redux";
 import Modal from "react-modal";
 import Info from "../../pages/Info";
-import { setModalFalse } from "../../services/modalSlice";
+import { setModalFalse } from "../../redux/reducers/modalSlice";
 function Popup() {
   const isOpened = useSelector((state) => state.modalSlice.value);
   const dispatch = useDispatch();
@@ -25,8 +25,6 @@ function Popup() {
       paddingLeft: "0",
       paddingRight: "0",
       paddingTop: "0",
-      // height:'auto',
-      // paddingBottom: "100px",
 
     }
   };

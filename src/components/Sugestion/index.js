@@ -2,10 +2,11 @@ import React from "react";
 import Cover from "../Cover";
 import Slider from "react-slick";
 import "./style.css";
-import { useGetPopularSeriesQuery } from "../../services/movies";
+import { useGetPopularSeriesQuery } from "../../redux/reducers/movies";
 import { useDispatch } from "react-redux";
-import { setModalTrue } from "../../services/modalSlice";
+import { setModalTrue } from "../../redux/reducers/modalSlice";
 import TitleCategory from "../TitleCategory";
+import Loading from "../Loading";
 function Sugestion({category,title}) {
   const { data, error, isLoading } = useGetPopularSeriesQuery(category);
   const dispatch = useDispatch();
@@ -97,7 +98,7 @@ function Sugestion({category,title}) {
       {error ? (
         <>Oh no, there was an error</>
       ) : isLoading ? (
-        <>Loading...</>
+        <Loading/>
       ) : data ? (
         <>
           <div className="sugestion_wrapper">

@@ -2,8 +2,9 @@ import React from "react";
 import Button from "../Button";
 import "./style.css";
 import { useDispatch } from "react-redux";
-import { setModalTrue } from "../../services/modalSlice";
-import { useGetMovieByCodeQuery } from "../../services/movies";
+import { useGetMovieByCodeQuery } from "../../redux/reducers/movies";
+import { setModalTrue } from "../../redux/reducers/modalSlice";
+import Loading from "../Loading";
 
 function Description() {
   const { data, error, isLoading } = useGetMovieByCodeQuery("100088");
@@ -11,7 +12,6 @@ function Description() {
   const dispatch = useDispatch();
 
   const sendToInfoPage = async (code) => {
-
     await dispatch({ type: "CODE_ID", code });
 
     dispatch(setModalTrue());
@@ -21,7 +21,7 @@ function Description() {
       {error ? (
         <>Oh no, there was an error</>
       ) : isLoading ? (
-        <>Loading...</>
+        <Loading />
       ) : data ? (
         <>
           <div className="description_wrapper">

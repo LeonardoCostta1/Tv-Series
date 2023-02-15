@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-// import Search from "../Search";
+import Logo from "../Logo";
+import User from "../User";
 
 import "./style.css";
 
-function Menu({ textLogo}) {
+function Menu() {
   const [scroll, setScroll] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -14,13 +15,8 @@ function Menu({ textLogo}) {
   return (
     <div className={`menu_wrapper ${scroll ? "active" : ""}`}>
       <div className="menu_container">
-        <div className="logo_container">
-          <div className="brand">
-            <span>s</span>
-          </div>
-          {textLogo}
-        </div>
-        <div className="search_menu_container">{/* <Search/> */}</div>
+        <Logo textLogo={"streamreel"} />
+        <div className="search_menu_container"><User/></div>
       </div>
     </div>
   );

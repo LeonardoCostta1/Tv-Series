@@ -1,0 +1,25 @@
+.logo_container{
+    color: #fff;
+    font-family: 'Lalezar';
+    font-weight: 400;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .brand{
+      height: 25px;
+      width: 25px;
+      background: #fff;
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 45px;
+      margin-right: 8px;
+      span{
+        color: #000;
+        position: relative;
+        top: 4px;
+      }
+    }
+}

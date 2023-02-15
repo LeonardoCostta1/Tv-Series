@@ -1,0 +1,28 @@
+.user_wrapper .user_controll_wrapper {
+  width: 400px;
+}
+
+.signout {
+  text-transform: capitalize;
+  cursor: pointer;
+  border: none !important;
+  padding: 5px 10px 0;
+}
+.signout:hover {
+  color: #999;
+}
+
+.username_container .username {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+.username_container .username .user_photo {
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  background: #fff;
+  cursor: pointer;
+  margin-left: 10px;
+}/*# sourceMappingURL=style.css.map */
